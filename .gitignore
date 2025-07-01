@@ -1,0 +1,21 @@
+.env
+*.tfstate
+*.tfstate.backup
+*.tfvars
+crash.log
+
+# Ignore the .terraform working directory
+.terraform/
+
+# Ignore environment files
+.env
+
+# Ignore lock files if needed (optional)
+*.lock.hcl
+
+# VSCode settings (optional)
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
