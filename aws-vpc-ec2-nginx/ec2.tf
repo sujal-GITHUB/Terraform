@@ -6,11 +6,11 @@ resource "aws_instance" "nginx-server" {
   associate_public_ip_address = true
 
     user_data = <<-EOF
-    #!/bin/bash
-    sudo apt-get update
-    sudo apt-get install -y nginx
-    sudo systemctl start nginx
-    EOF
+                #!/bin/bash
+                sudo apt-get update
+                sudo apt-get install -y nginx
+                sudo systemctl start nginx
+                EOF
 
   tags = {
     Name        = "nginx-server"

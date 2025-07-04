@@ -19,6 +19,5 @@ resource "aws_security_group" "nginx-sg" {
 
   tags = {
     Name = "nginx-sg"
-    Environment = "Dev"
   }
 }
