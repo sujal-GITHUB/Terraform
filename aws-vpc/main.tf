@@ -68,3 +68,14 @@ resource "aws_route_table_association" "public-subnet-association" {
   subnet_id = aws_subnet.public-subnet.id
   route_table_id = aws_route_table.my-rt.id
 }
+
+resource "aws_instance" "vpc-instance-1" {
+  ami = "ami-020cba7c55df1f615"
+  instance_type = "t2.micro"
+  subnet_id = aws_subnet.public-subnet.id
+
+  tags = {
+    Name = "MyVPCInstance1"
+    Environment = "Dev"
+    }
+}
